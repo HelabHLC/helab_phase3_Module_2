@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Matching Tool</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <nav>
+        <a href="/">🏠 Home</a>
+        <a href="/tools/match">🎨 Matching Tool</a>
+    </nav>
+    <main>
+        <h2>LAB Matching</h2>
+        <form method="POST">
+            L: <input type="number" name="L" step="0.1" required>
+            a: <input type="number" name="a" step="0.1" required>
+            b: <input type="number" name="b" step="0.1" required>
+            <button type="submit">Vergleichen</button>
+        </form>
+
+        {% if result %}
+            <h3>Ergebnis:</h3>
+            <p>ΔE: {{ result.delta }}</p>
+            <p>Pigment: {{ result.pigment.name }} ({{ result.pigment.code }})</p>
+
+            <form method="post" action="/tools/match/export">
+                <input type="hidden" name="format" value="csv">
+                <button type="submit">⬇️ CSV Export</button>
+            </form>
+            <form method="post" action="/tools/match/export">
+                <input type="hidden" name="format" value="json">
+                <button type="submit">⬇️ JSON Export</button>
+            </form>
+        {% endif %}
+    </main>
+</body>
+</html>
