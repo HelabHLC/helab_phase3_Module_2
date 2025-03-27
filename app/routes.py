@@ -1,3 +1,7 @@
+from flask import Flask
+
+app = Flask(__name__)
+
 from flask import render_template, request, send_file
 import io, csv, json
 from app.matching import match_lab_to_pigments
