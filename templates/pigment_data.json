@@ -1,0 +1,42 @@
+{
+    "PR108": {
+        "name": "Cadmium Red",
+        "lab": [
+            42.5,
+            59.2,
+            29.1
+        ]
+    },
+    "PB29": {
+        "name": "Ultramarine Blue",
+        "lab": [
+            25.4,
+            10.3,
+            -45.7
+        ]
+    },
+    "PY37": {
+        "name": "Cadmium Yellow",
+        "lab": [
+            92.1,
+            -5.1,
+            90.3
+        ]
+    },
+    "PG18": {
+        "name": "Viridian Green",
+        "lab": [
+            53.2,
+            -35.1,
+            8.3
+        ]
+    },
+    "PB15": {
+        "name": "Phthalo Blue",
+        "lab": [
+            32.1,
+            12.5,
+            -49.1
+        ]
+    }
+}
