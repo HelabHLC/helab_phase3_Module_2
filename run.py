@@ -1,8 +1,7 @@
-from app.routes import app  # <-- Dein Flask-Objekt muss so heißen
+from flask import Flask, render_template
 
-if __name__ == "__main__":
-    app.run()
+app = Flask(__name__)
 
-
-if __name__ == "__main__":
-    app.run(debug=True)
+@app.route("/")
+def index():
+    return render_template("index.html")
